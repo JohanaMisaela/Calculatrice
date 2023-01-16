@@ -1,0 +1,117 @@
+<html> 
+   <head> 
+    <link rel="stylesheet" href="style.css">
+      <script> 
+         //fonction qui évalue le chiffre et renvoie la sortie
+         function calculer() 
+         { 
+             let a = document.getElementById("output").value 
+             let b = eval(a) 
+             document.getElementById("output").value = b 
+             console.log(b)
+         } 
+         //fonction qui affiche la valeur
+         function afficher(val) 
+         { 
+             document.getElementById("output").value+=val 
+             console.log(val)
+         } 
+         //fonction qui efface l'écran 
+         function effacer() 
+         { 
+             document.getElementById("output").value = "" 
+         } 
+      </script>
+      <style>
+        td button{width:100%}
+      </style>
+   </head> 
+   <body> 
+      <!-- <table border="1"> 
+
+         <tr> 
+            <td colspan="3"><input id="output"/></td> 
+            <td><button onclick="effacer()">c</button></td> 
+         </tr> 
+         <tr> 
+            <td><button onclick="afficher('1')">1</button></td> 
+            <td><button onclick="afficher('2')">2</button></td> 
+            <td><button onclick="afficher('3')">3</button></td> 
+            <td><button onclick="afficher('+')">+</button></td> 
+         </tr> 
+         <tr> 
+            <td><button onclick="afficher('4')">4</button></td> 
+            <td><button onclick="afficher('5')">5</button></td> 
+            <td><button onclick="afficher('6')">6</button></td> 
+            <td><button onclick="afficher('-')">-</button></td> 
+         </tr> 
+         <tr> 
+            <td><button onclick="afficher('7')">7</button></td> 
+            <td><button onclick="afficher('8')">8</button></td> 
+            <td><button onclick="afficher('9')">9</button></td> 
+            <td><button onclick="afficher('*')">*</button></td> 
+         </tr> 
+         <tr>
+            <td><button onclick="afficher('.')">.</button></td> 
+            <td><button onclick="afficher('0')">0</button></td> 
+            <td><button onclick="calculer()">=</button></td> 
+            <td><button onclick="afficher('/')">/</button></td> 
+         </tr> 
+      </table>  -->
+      <div class="calculator">
+        <div class="header">
+           <div class="window">
+              <span class="red"></span>
+              <span class="yellow"></span>
+              <span class="green"></span>
+           </div>
+           <div class="input">
+               <span><input id="output" style="background-color: black; border: none; color: white; text-align: end; font-size: large;"></input></span>
+           </div>
+        </div>
+        <div class="keys">
+           <div class="row">
+              <div class="number">
+                <span onclick="afficher('7')">7</span>
+                 <span onclick="afficher('8')">8</span>
+                 <span onclick="afficher('9')">9</span>
+              </div>
+              <div class="symbol">
+                 <span onclick="afficher('*')">*</span>
+              </div>
+           </div>
+           <div class="row">
+              <div class="number">
+                 <span onclick="afficher('4')">4</span>
+                 <span onclick="afficher('5')">5</span>
+                 <span onclick="afficher('6')">6</span>
+              </div>
+              <div class="symbol">
+                 <span onclick="afficher('-')">-</span>
+              </div>
+           </div>
+           <div class="row">
+              <div class="number">
+                 <span onclick="afficher('1')">1</span>
+                 <span onclick="afficher('2')">2</span>
+                 <span onclick="afficher('3')">3</span>
+              </div>
+              <div class="symbol">
+                 <span onclick="afficher('+')">+</span>
+              </div>
+           </div>
+           <div class="row">
+              <div class="number">
+                 <span class="dull"  onclick="effacer()">AC</span>
+                 <span onclick="afficher('0')">0</span>
+                 <span onclick="afficher('/')">/</span>
+              </div>
+              <div class="symbol action">
+                 <span onclick="calculer()" >=</span>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+    </body> 
+</html>
